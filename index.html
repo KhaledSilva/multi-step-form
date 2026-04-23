@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/variables.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+
+  <title>Frontend Mentor | Multi-step form</title>
+
+</head>
+
+<body>
+  <!-- Sidebar start -->
+  <aside class="sidebar">
+    <div class="buttons">
+      <button type="button">1</button>
+      <span class="step">Step 1</span>
+      <span class="btn-title">Your info</span>
+    </div>
+    <div class="buttons">
+      <button type="button">2</button>
+      <span class="step">Step 2</span>
+      <span class="btn-title">Select plan</span>
+    </div>
+    <div class="buttons">
+      <button type="button">3</button>
+      <span class="step">Step 3</span>
+      <span class="btn-title">Add-ons</span>
+    </div>
+    <div class="buttons">
+      <button type="button">4</button>
+      <span class="step">Step 4</span>
+      <span class="btn-title">Summary</span>
+    </div>
+  </aside>
+  <!-- Sidebar end -->
+
+  <!-- Step 1 start -->
+  <main class="container">
+    <section class="personal-info">
+      <h1>Personal info</h1>
+      <h2>Please provide your name, email address, and phone number.</h2>
+
+      <h3>Name</h3>
+      <input placeholder="e.g. Stephen King"></input>
+
+      <h3>Email Address</h3>
+      <input placeholder="e.g. stephenking@lorem.com"></input>
+
+      <h3>Phone Number</h3>
+      <input placeholder="e.g. +1 234 567 890"></input>
+
+      <button type="submit" class="btn-next">Next Step</button>
+    </section>
+    <!-- Step 1 end -->
+
+    <!-- Step 2 start -->
+    <section class="select-plan">
+      <h1>Select your plan</h1>
+      You have the option of monthly or yearly billing.
+
+      <div class="plans-container">
+        <div class="plans">
+          <img src="./assets/images/icon-arcade.svg" alt="image arcade">
+          <span class="plan-type">Arcade</span>
+          <span class="plan-value">$9/mo</span>
+        </div>
+
+        <div class="plans">
+          <img src="./assets/images/icon-advanced.svg" alt="image Advanced">
+          <span class="plan-type">Advanced</span>
+          <span class="plan-value">$12/mo</span>
+        </div>
+
+        <div class="plans">
+          <img src="./assets/images/icon-pro.svg" alt="image pro">
+          <span class="plan-type">Pro</span>
+          <span class="plan-value">$15/mo</span>
+        </div>
+      </div>
+
+      <div class="toggle-container">
+        <span class="label active">Monthly</span>
+
+        <label class="switch">
+          <input type="checkbox"></input>
+          <span class="slider"></span>
+        </label>
+
+        <span class="label">Yearly</span>
+      </div>
+
+      <button type="submit" class="btn-back">Go Back</button>
+      <button type="submit" class="btn-next">Next Step</button>
+    </section>
+    <!-- Step 2 end -->
+
+    <!-- Step 3 start -->
+    <section class="add-ons">
+      <h1>Pick add-ons</h1>
+      <h2>Add-ons help enhance your gaming experience.</h2>
+
+      <div class="options">
+        <label class="option">
+          <input type="checkbox">
+          <span class="add-ons-title">Online service</span>
+          <span class="add-ons-subtitle">Access to multiplayer games</span>
+          <span class="add-ons-value">+$1/mo</span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox">
+          <span class="add-ons-title">Larger storage</span>
+          <span class="add-ons-subtitle">Extra 1TB of cloud save</span>
+          <span class="add-ons-value">+$2/mo</span>
+        </label>
+
+        <label class="option">
+          <input type="checkbox">
+          <span class="add-ons-title">Customizable Profile</span>
+          <span class="add-ons-subtitle">Custom theme on your profile</span>
+          <span class="add-ons-value">+$2/mo</span>
+        </label>
+      </div>
+
+      <button type="submit" class="btn-back">Go Back</button>
+      <button type="submit" class="btn-next">Next Step</button>
+    </section>
+    <!-- Step 3 end -->
+
+    <!-- Step 4 start -->
+    <section class="finishing-up">
+      Finishing up
+      Double-check everything looks OK before confirming.
+
+      <!-- Dynamically add subscription and add-on selections here -->
+
+      Total (per month/year)
+
+      <button type="submit" class="btn-back">Go Back</button>
+      <button type="submit" class="btn-confirm">Confirm</button>
+    </section>
+    <!-- Step 4 end -->
+
+    <!-- Step 5 start -->
+    <section class="thank-you">
+      <img src="./assets/images/icon-checkmark.svg" alt="image checkmark">
+      <h1>Thank you!</h1>
+
+      <p>Thanks for confirming your subscription! We hope you have fun
+        using our platform. If you ever need support, please feel free
+        to email us at support@loremgaming.com.</p>
+    </section>
+    <!-- Step 5 end -->
+  </main>
+
+</body>
+
+</html>
