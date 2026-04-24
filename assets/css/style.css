@@ -1,15 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 body {
     display: flex;
     height: 100vh;
     padding: 20px;
+    font-family: "Ubuntu", sans-serif;
 }
+
 .sidebar {
+    width: 568px;
     background-image: url(../images/bg-sidebar-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    width: 500px;
-    border-radius: 30px;
+    border-radius: 15px;
     padding-top: 70px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 30px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+}
+
+.buttons-container .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid var(--blue-50);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.buttons-container .button:hover {
+    background-color: var(--blue-200);
+    color: var(--purple-600);
+    border: none;
+}
+
+.buttons-container .button-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.button-content .step {
+    color: var(--blue-300);
+}
+
+.button-content .btn-title {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+}
+
+.container h1 {
+    font-size: 42px;
+    margin: 20px 0;
+    color: var(--blue-950);
+}
+
+.container h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--grey-500);
+    margin-bottom: 40px;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.personal-info label {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 30px;
+    color: var(--blue-950);
+}
+
+.personal-info .form-box {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid rgba(184, 184, 186, 0.5);
+    padding-left: 15px;
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--blue-950);
+}
+
+.container .footer {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.footer .btn-next, .btn-back, .btn-confirm {
+    background-color: var(--blue-950);
+    color: var(--white);
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.footer .btn-next:hover, .btn-back:hover, .btn-confirm:hover{
+    background-color: var(--purple-600);
+}
+
+.footer .btn-next {
+    margin-left: auto;
+}
+
+.select-plan {
+    height: 100vh;
+    display: none;
+}
+
+.add-ons {
+    display: none;
+}
+
+.finishing-up {
+    display: none;
+}
+.thank-you {
+    display: none;
 }

@@ -18,46 +18,56 @@
 <body>
   <!-- Sidebar start -->
   <aside class="sidebar">
-    <div class="buttons">
-      <button type="button">1</button>
-      <span class="step">Step 1</span>
-      <span class="btn-title">Your info</span>
+    <div class="buttons-container">
+      <button type="button" class="button" id="button">1</button>
+      <div class="button-content">
+        <span class="step">Step 1</span>
+        <span class="btn-title">Your info</span>
+      </div>
     </div>
-    <div class="buttons">
-      <button type="button">2</button>
-      <span class="step">Step 2</span>
-      <span class="btn-title">Select plan</span>
+    <div class="buttons-container">
+      <button type="button" class="button" id="button">2</button>
+      <div class="button-content">
+        <span class="step">Step 2</span>
+        <span class="btn-title">Select plan</span>
+      </div>
     </div>
-    <div class="buttons">
-      <button type="button">3</button>
-      <span class="step">Step 3</span>
-      <span class="btn-title">Add-ons</span>
+    <div class="buttons-container">
+      <button type="button" class="button" id="button">3</button>
+      <div class="button-content">
+        <span class="step">Step 3</span>
+        <span class="btn-title">Add-ons</span>
+      </div>
     </div>
-    <div class="buttons">
-      <button type="button">4</button>
-      <span class="step">Step 4</span>
-      <span class="btn-title">Summary</span>
+    <div class="buttons-container">
+      <button type="button" class="button" id="button">4</button>
+      <div class="button-content">
+        <span class="step">Step 4</span>
+        <span class="btn-title">Summary</span>
+      </div>
     </div>
   </aside>
   <!-- Sidebar end -->
 
   <!-- Step 1 start -->
   <main class="container">
-    <section class="personal-info">
+    <form class="personal-info">
       <h1>Personal info</h1>
       <h2>Please provide your name, email address, and phone number.</h2>
 
-      <h3>Name</h3>
-      <input placeholder="e.g. Stephen King"></input>
+      <label>Name</label>
+      <input type="text" id="name" name="name" class="form-box" placeholder="e.g. Stephen King" required>
 
-      <h3>Email Address</h3>
-      <input placeholder="e.g. stephenking@lorem.com"></input>
+      <label>Email Address</label>
+      <input type="email" id="email" name="email" class="form-box" placeholder="e.g. stephenking@lorem.com" required>
 
-      <h3>Phone Number</h3>
-      <input placeholder="e.g. +1 234 567 890"></input>
+      <label>Phone Number</label>
+      <input type="tel" id="phone" name="phone" class="form-box" placeholder="e.g. +1 234 567 890" required>
 
-      <button type="submit" class="btn-next">Next Step</button>
-    </section>
+      <footer class="footer">
+        <button type="submit" class="btn-next">Next Step</button>
+      </footer>
+    </form>
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
@@ -96,8 +106,10 @@
         <span class="label">Yearly</span>
       </div>
 
-      <button type="submit" class="btn-back">Go Back</button>
-      <button type="submit" class="btn-next">Next Step</button>
+      <footer class="footer">
+        <button type="submit" class="btn-back">Go Back</button>
+        <button type="submit" class="btn-next">Next Step</button>
+      </footer>
     </section>
     <!-- Step 2 end -->
 
@@ -129,8 +141,10 @@
         </label>
       </div>
 
-      <button type="submit" class="btn-back">Go Back</button>
-      <button type="submit" class="btn-next">Next Step</button>
+      <footer class="footer">
+        <button type="submit" class="btn-back">Go Back</button>
+        <button type="submit" class="btn-next">Next Step</button>
+      </footer>
     </section>
     <!-- Step 3 end -->
 
@@ -142,9 +156,10 @@
       <!-- Dynamically add subscription and add-on selections here -->
 
       Total (per month/year)
-
-      <button type="submit" class="btn-back">Go Back</button>
-      <button type="submit" class="btn-confirm">Confirm</button>
+      <footer class="footer">
+        <button type="submit" class="btn-back">Go Back</button>
+        <button type="submit" class="btn-confirm">Confirm</button>
+      </footer>
     </section>
     <!-- Step 4 end -->
 
