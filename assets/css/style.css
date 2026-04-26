@@ -94,7 +94,7 @@ body {
     width: 100%;
     height: 100vh;
 }
-
+.personal-info {display: none;}
 .personal-info label {
     font-size: 22px;
     font-weight: 500;
@@ -140,8 +140,108 @@ body {
 }
 
 .select-plan {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     height: 100vh;
-    display: none;
+}
+.select-plan .plans-container {
+    display: flex;
+    justify-content: space-between;
+    height: 220px;
+    margin-bottom: 30px;
+}
+
+.plans-container .plans {
+    background-color: var(--white);
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(184, 184, 186, 0.5);
+}
+
+.plans-container .plans:hover {
+    border: 2px solid var(--purple-600);
+}
+
+.plans-container .plans img {
+    width: 65px;
+
+}
+
+.plans-container .plans .plan-type {
+    color: var(--blue-950);
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: auto;
+}
+
+
+.plans-container .plans .plan-value {
+    color: var(--grey-500);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.select-plan .toggle-container {
+    background-color: var(--blue-50);
+    width: 100%;
+    height: 75px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.select-plan .toggle-container .label {
+    color: var(--grey-500);
+    font-weight: 700;
+    font-size: 20px;
+}
+.select-plan .toggle-container .label.active {
+    color: var(--blue-950);
+} 
+
+.toggle-container .switch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+}
+
+.toggle-container input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-container .switch .slider {
+    position: absolute;
+    inset: 0;
+    background-color: var(--blue-950);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.toggle-container .switch .slider::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    top: 4px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider::before {
+    transform: translateX(24px);
 }
 
 .add-ons {
