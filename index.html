@@ -19,28 +19,28 @@
   <!-- Sidebar start -->
   <aside class="sidebar">
     <div class="buttons-container">
-      <button type="button" class="button" id="button">1</button>
+      <button type="button" class="button" data-id="c1">1</button>
       <div class="button-content">
         <span class="step">Step 1</span>
         <span class="btn-title">Your info</span>
       </div>
     </div>
     <div class="buttons-container">
-      <button type="button" class="button" id="button">2</button>
+      <button type="button" class="button" data-id="c2">2</button>
       <div class="button-content">
         <span class="step">Step 2</span>
         <span class="btn-title">Select plan</span>
       </div>
     </div>
     <div class="buttons-container">
-      <button type="button" class="button" id="button">3</button>
+      <button type="button" class="button" data-id="c3">3</button>
       <div class="button-content">
         <span class="step">Step 3</span>
         <span class="btn-title">Add-ons</span>
       </div>
     </div>
     <div class="buttons-container">
-      <button type="button" class="button" id="button">4</button>
+      <button type="button" class="button" data-id="c4">4</button>
       <div class="button-content">
         <span class="step">Step 4</span>
         <span class="btn-title">Summary</span>
@@ -51,7 +51,7 @@
 
   <!-- Step 1 start -->
   <main class="container">
-    <form class="personal-info">
+    <form id="c1" class="personal-info content">
       <h1>Personal info</h1>
       <h2>Please provide your name, email address, and phone number.</h2>
 
@@ -71,7 +71,7 @@
     <!-- Step 1 end -->
 
     <!-- Step 2 start -->
-    <section class="select-plan">
+    <section id="c2" class="select-plan content hidden">
       <h1>Select your plan</h1>
       <h2>You have the option of monthly or yearly billing.</h2>
 
@@ -117,7 +117,7 @@
     <!-- Step 2 end -->
 
     <!-- Step 3 start -->
-    <section class="add-ons">
+    <section id="c3" class="add-ons content hidden">
       <h1>Pick add-ons</h1>
       <h2>Add-ons help enhance your gaming experience.</h2>
 
@@ -158,13 +158,14 @@
     <!-- Step 3 end -->
 
     <!-- Step 4 start -->
-    <section class="finishing-up">
-      Finishing up
-      Double-check everything looks OK before confirming.
+    <section id="c4" class="finishing-up content hidden">
+      <h1>Finishing up</h1>
+      <h2>Double-check everything looks OK before confirming.</h2>
 
-      <!-- Dynamically add subscription and add-on selections here -->
+      <div class="total-contents"></div>
 
-      Total (per month/year)
+      <span class="total">Total (per month/year)</span>
+      
       <footer class="footer">
         <button type="submit" class="btn-back">Go Back</button>
         <button type="submit" class="btn-confirm">Confirm</button>
@@ -173,7 +174,7 @@
     <!-- Step 4 end -->
 
     <!-- Step 5 start -->
-    <section class="thank-you">
+    <section class="thank-you contents hidden">
       <div class="img-check">
         <img src="./assets/images/icon-checkmark.svg" alt="image checkmark">
       </div>
@@ -186,6 +187,7 @@
     <!-- Step 5 end -->
   </main>
 
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

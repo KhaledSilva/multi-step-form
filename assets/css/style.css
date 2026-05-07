@@ -95,7 +95,9 @@ body {
     height: 100vh;
 }
 
-.personal-info {display: none;}
+.hidden {
+    display: none !important;
+}
 
 .personal-info label {
     font-size: 22px;
@@ -164,8 +166,6 @@ body {
     height: 100vh;
 }
 
-.select-plan {display: none;}
-
 .select-plan .plans-container {
     display: flex;
     justify-content: space-evenly;
@@ -205,7 +205,6 @@ body {
     font-weight: 700;
     margin-top: auto;
 }
-
 
 .plans-container .plans .plan-value {
     color: var(--grey-500);
@@ -285,8 +284,6 @@ input:checked + .slider::before {
     flex-direction: column;
     height: 100vh;
 }
-
-.add-ons {display: none;}
 
 .add-ons .options {
     display: flex;
@@ -372,7 +369,9 @@ input[type="checkbox"]:checked::before {
 }
 
 .finishing-up {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .thank-you {
@@ -384,7 +383,7 @@ input[type="checkbox"]:checked::before {
     height: 100vh;
 }
 
-.img-check {
+.thank-you .img-check {
     width: 100px;
     height: 100px;
     background-color: rgba(249, 68, 68, 0.7);
@@ -396,7 +395,7 @@ input[type="checkbox"]:checked::before {
     overflow: hidden;
 }
 
-.img-check::after {
+.thank-you .img-check::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -407,7 +406,7 @@ input[type="checkbox"]:checked::before {
     box-shadow: 30px 50px 0 rgba(0,0,0,0.09);
 }
 
-.img-check::before {
+.thank-you .img-check::before {
     content: "";
     width: 55px;
     height: 55px;
@@ -417,13 +416,13 @@ input[type="checkbox"]:checked::before {
     z-index: 1;
 }
 
-.img-check img {
+.thank-you .img-check img {
     width: 36px;
     z-index: 2;
     filter: invert(38%) sepia(80%) saturate(500%) hue-rotate(320deg) brightness(0.8) contrast(0.9);  
 }
 
-.thank-you h2 {
+.thank-you .thank-you h2 {
     color: rgba(166, 166, 168, 0.856);
     width: 560px;
     font-size: 20px;
