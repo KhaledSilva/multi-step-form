@@ -99,6 +99,11 @@ body {
     display: none !important;
 }
 
+.personal-info .title-erro {
+    display: flex;
+    justify-content: space-between;
+}
+
 .personal-info label {
     font-size: 22px;
     font-weight: 500;
@@ -116,6 +121,26 @@ body {
     font-weight: 500;
     font-size: 30px;
     color: var(--blue-950);
+}
+
+.personal-info .form-box:hover {
+    border-color: var(--purple-600);
+} 
+
+.personal-info .input-error {
+    border-color: var(--red-500);
+}
+
+.personal-info .erro {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 30px;
+    color: var(--red-500);
+    display: none;
+}
+
+.personal-info .show-erro{
+    display: block;
 }
 
 .container .footer {

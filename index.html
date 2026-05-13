@@ -55,14 +55,23 @@
       <h1>Personal info</h1>
       <h2>Please provide your name, email address, and phone number.</h2>
 
-      <label>Name</label>
-      <input type="text" id="name" name="name" class="form-box" placeholder="e.g. Stephen King" required>
+      <div class="title-erro">
+        <label>Name</label>
+        <span class="erro">This field is required</span>
+      </div>
+      <input type="text" id="name" name="name" class="form-box" placeholder="e.g. Stephen King" >
 
-      <label>Email Address</label>
-      <input type="email" id="email" name="email" class="form-box" placeholder="e.g. stephenking@lorem.com" required>
+      <div class="title-erro">
+        <label>Email Address</label>
+        <span class="erro">This field is required</span>
+      </div>
+      <input type="email" id="email" name="email" class="form-box" placeholder="e.g. stephenking@lorem.com">
 
-      <label>Phone Number</label>
-      <input type="tel" id="phone" name="phone" class="form-box" placeholder="e.g. +1 234 567 890" required>
+      <div class="title-erro">
+        <label>Phone Number</label>
+        <span class="erro">This field is required</span>
+      </div>
+      <input type="tel" id="phone" name="phone" class="form-box" placeholder="e.g. +1 234 567 890">
 
       <footer class="footer">
         <button type="submit" class="btn-next">Next Step</button>
