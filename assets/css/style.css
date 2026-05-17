@@ -210,13 +210,18 @@ body {
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
-    border: 1px solid rgba(184, 184, 186, 0.5);
+    border: 2px solid rgba(184, 184, 186, 0.5);
     transition: all 0.3s ease;
     overflow: hidden;
 }
 
 .plans-container .plans:hover {
-    border: 2px solid var(--purple-600);
+    border: 1px solid var(--purple-600);
+}
+
+.plans-container .plans.plan-active {
+    border: 1px solid var(--purple-600);
+    background-color: var(--blue-100);
 }
 
 .plans-container .plans img {

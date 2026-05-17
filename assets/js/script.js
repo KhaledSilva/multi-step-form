@@ -58,3 +58,55 @@ backButtons.forEach(button => {
     showPage(currentPage - 1);
   });
 });
+
+const plans = document.querySelectorAll(".plans");
+
+plans.forEach(plan => {
+  plan.addEventListener("click", () => {
+    plans.forEach(item => {
+      item.classList.remove("plan-active");
+    });
+    plan.classList.add("plan-active");
+  });
+});
+
+const toggle = document.querySelector(".switch input");
+const planValues = document.querySelectorAll(".plan-value");
+const bonusMessages = document.querySelectorAll(".free-bonus-msg");
+const labels = document.querySelectorAll(".label");
+
+toggle.addEventListener("change", () => {
+
+  const yearly = toggle.checked;
+
+  labels.forEach(label => {
+    label.classList.remove("active");
+  });
+
+  if(yearly) {
+    labels[1].classList.add("active");
+  } else {
+    labels[0].classList.add("active");
+  }
+
+  planValues.forEach(value => {
+
+    const month = value.dataset.month;
+    const year = value.dataset.year;
+
+    if(yearly) {
+      value.textContent = `$${year}/yr`;
+    } else {
+      value.textContent = `$${month}/mo`;
+    }
+  });
+
+  bonusMessages.forEach(msg => {
+
+    if(yearly) {
+      msg.textContent = "2 months free";
+    } else {
+      msg.textContent = "";
+    }
+  });
+});
